@@ -1,0 +1,18 @@
+{
+  "id": "yourname.your-animation",
+  "title": "作品名称",
+  "author": "作者名称",
+  "license": "CC-BY-4.0",
+  "kind": "video",
+  "description": "用一句话描述画面、声音和适合的构图。请将本模板中的示例地址、大小与校验值全部替换为实际作品信息。",
+  "sourceUrl": "https://github.com/YOUR-NAME/YOUR-ANIMATION/tree/v1.0.0",
+  "licenseUrl": "https://github.com/YOUR-NAME/YOUR-ANIMATION/blob/v1.0.0/LICENSE",
+  "previewUrl": "https://raw.githubusercontent.com/YOUR-NAME/YOUR-ANIMATION/v1.0.0/preview.png",
+  "durationSeconds": 20,
+  "asset": {
+    "url": "https://github.com/YOUR-NAME/YOUR-ANIMATION/releases/download/v1.0.0/boot.mp4",
+    "format": "mp4",
+    "bytes": 1000000,
+    "sha256": "REPLACE_WITH_THE_ACTUAL_64_LOWERCASE_HEX_DIGITS"
+  }
+}

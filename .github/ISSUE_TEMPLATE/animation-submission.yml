@@ -1,0 +1,47 @@
+name: 投稿帮助 / Submission help
+description: 不熟悉 Pull Request 时，在这里提供作品和授权信息，请维护者协助整理条目。
+title: '[投稿] '
+body:
+  - type: markdown
+    attributes:
+      value: '请先阅读 CONTRIBUTING.md。作品经审核后才公开；本表不会自动发布媒体或目录。请勿上传私人信息、无授权的影视/音乐或可执行代码。'
+  - type: input
+    id: title-author
+    attributes:
+      label: 作品名与作者
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: 固定版本 GitHub Release 视频地址
+      description: MP4 或 WebM，1–45 秒、最多 120 MiB。
+    validations:
+      required: true
+  - type: textarea
+    id: digest
+    attributes:
+      label: 时长、精确字节数与 SHA256
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: 源码、各素材作者、许可与授权范围
+      description: 包括音轨、角色影像、字体及图标；请提供完整许可页面链接。
+    validations:
+      required: true
+  - type: textarea
+    id: preview-tests
+    attributes:
+      label: 预览图与测试情况
+      description: 是否有声音，在哪些窗口比例播放过，是否能正常跳过。
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: 投稿确认
+      options:
+        - label: 我已阅读投稿说明，并拥有作品及其中素材的适当公开分发授权。
+          required: true

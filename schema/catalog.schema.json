@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/MingoYung/dsh-awakening-library/main/schema/catalog.schema.json",
+  "title": "DSH Awakening community animation catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "entries": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "githubUrl": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https://(?:[gG][iI][tT][hH][uU][bB]\\.[cC][oO][mM]|[rR][aA][wW]\\.[gG][iI][tT][hH][uU][bB][uU][sS][eE][rR][cC][oO][nN][tT][eE][nN][tT]\\.[cC][oO][mM]|[oO][bB][jJ][eE][cC][tT][sS]\\.[gG][iI][tT][hH][uU][bB][uU][sS][eE][rR][cC][oO][nN][tT][eE][nN][tT]\\.[cC][oO][mM]|[rR][eE][lL][eE][aA][sS][eE]\\-[aA][sS][sS][eE][tT][sS]\\.[gG][iI][tT][hH][uU][bB][uU][sS][eE][rR][cC][oO][nN][tT][eE][nN][tT]\\.[cC][oO][mM]|[uU][sS][eE][rR]\\-[iI][mM][aA][gG][eE][sS]\\.[gG][iI][tT][hH][uU][bB][uU][sS][eE][rR][cC][oO][nN][tT][eE][nN][tT]\\.[cC][oO][mM]|[cC][aA][mM][oO]\\.[gG][iI][tT][hH][uU][bB][uU][sS][eE][rR][cC][oO][nN][tT][eE][nN][tT]\\.[cC][oO][mM])(?::443)?(?:[/?][^\\s#]*)?$"
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "author",
+        "license",
+        "kind",
+        "description",
+        "sourceUrl",
+        "licenseUrl",
+        "durationSeconds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9.-]{0,79}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*$"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*$"
+        },
+        "license": {
+          "enum": [
+            "MIT",
+            "CC-BY-4.0",
+            "CC0-1.0",
+            "CC-BY-SA-4.0"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "builtin",
+            "video"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*$"
+        },
+        "sourceUrl": {
+          "$ref": "#/$defs/githubUrl"
+        },
+        "licenseUrl": {
+          "$ref": "#/$defs/githubUrl"
+        },
+        "previewUrl": {
+          "$ref": "#/$defs/githubUrl"
+        },
+        "durationSeconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 45
+        },
+        "asset": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url",
+            "format",
+            "bytes",
+            "sha256"
+          ],
+          "properties": {
+            "url": {
+              "$ref": "#/$defs/githubUrl"
+            },
+            "format": {
+              "enum": [
+                "mp4",
+                "webm"
+              ]
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 125829120
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "format": {
+                    "const": "mp4"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "url": {
+                    "pattern": "\\.[mM][pP]4(?:\\?[^#]*)?$"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "format": {
+                    "const": "webm"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "url": {
+                    "pattern": "\\.[wW][eE][bB][mM](?:\\?[^#]*)?$"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "builtin"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "id": {
+                "const": "mingoyung.awakening"
+              },
+              "durationSeconds": {
+                "const": 22
+              }
+            },
+            "not": {
+              "required": [
+                "asset"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "asset"
+            ],
+            "properties": {
+              "id": {
+                "not": {
+                  "const": "mingoyung.awakening"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$comment": "The trusted scripts/catalog.py additionally enforces unique IDs, exact filenames, non-whitespace text and the 1 MiB serialized catalog limit. Media assets are downloaded and verified only by the explicit --verify-assets command or by the plugin after a user download action."
+}

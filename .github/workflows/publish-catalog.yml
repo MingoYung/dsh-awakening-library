@@ -1,0 +1,44 @@
+name: Publish catalog
+
+on:
+  push:
+    branches: [main]
+    paths: ['entries/**', 'scripts/**', 'schema/**', '.github/workflows/publish-catalog.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-catalog-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate data from reviewed main entries
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch --no-tags origin main
+            git checkout -B catalog-publish origin/main
+            python -m unittest discover -s scripts -p 'test_*.py'
+            python scripts/catalog.py --write
+            python scripts/catalog.py --check
+            git add -- catalog.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update animation catalog'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          echo 'Catalog push failed; a maintainer can generate and commit catalog.json locally.' >&2
+          exit 1

@@ -1,0 +1,39 @@
+name: Validate animation submission
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: [main]
+    paths: ['entries/**']
+
+permissions:
+  contents: read
+
+jobs:
+  validate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out trusted base tools
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate trusted tooling
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Read submission as data without checking out its code
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+        shell: bash
+        run: |
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]] || exit 1
+          [[ "$PR_HEAD" =~ ^[0-9a-f]{40}$ ]] || exit 1
+          [[ "$PR_BASE" =~ ^[0-9a-f]{40}$ ]] || exit 1
+          git fetch --no-tags origin "refs/pull/$PR_NUMBER/head"
+          test "$(git rev-parse FETCH_HEAD)" = "$PR_HEAD"
+          python scripts/catalog.py --ref "$PR_HEAD" --base "$PR_BASE"

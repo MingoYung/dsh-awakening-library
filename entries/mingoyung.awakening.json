@@ -1,0 +1,12 @@
+{
+  "id": "mingoyung.awakening",
+  "title": "鲸启",
+  "author": "MingoYung",
+  "license": "MIT",
+  "kind": "builtin",
+  "description": "鲸启插件内置的22秒鲸鱼主题动画，包含文字组装、粒子归流与带原声的欢迎片段。第三方素材署名见来源页；这是社区作品，不代表DSH官方发布。",
+  "sourceUrl": "https://github.com/MingoYung/dsh-awakening/tree/v0.5.0",
+  "licenseUrl": "https://github.com/MingoYung/dsh-awakening/blob/v0.5.0/CREDITS.md",
+  "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening/v0.5.0/screenshots/preview-whale-desktop.png",
+  "durationSeconds": 22
+}
