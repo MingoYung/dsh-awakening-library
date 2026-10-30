@@ -1,0 +1,13 @@
+{
+  "owner": "OpenAI",
+  "product": "Codex",
+  "sourceType": "Official desktop application asset",
+  "applicationVersion": "26.1023.6621.0",
+  "assetEntry": "webview/assets/codex_new-f14177b03534.svg",
+  "assetFile": "assets/codex-mark.svg",
+  "sha256": "0b490f33f9c5b62c7db578f5101497efb87b774720f91b9e878243e761952c52",
+  "shape": "Rounded lobed cloud outline containing a terminal chevron and underscore; three native SVG paths.",
+  "officialProductPage": "https://openai.com/codex/",
+  "affiliation": "Independent fan-made DSH animation theme; no endorsement claim",
+  "licenseNote": "OpenAI brand artwork and trademark; not relicensed under the project code license."
+}

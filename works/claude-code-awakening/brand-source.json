@@ -1,0 +1,54 @@
+{
+  "owner": "Anthropic PBC",
+  "product": "Claude Code",
+  "sourceType": "Read-only official installed CLI artifact; faithful Unicode block geometry transcription",
+  "packageName": "@anthropic-ai/claude-code",
+  "packageVersion": "2.1.177",
+  "sourceArtifact": "bin/claude.exe",
+  "sourceSHA256": "408ddf27d45fc6b6516843c0513072bc0f474d7bface60ae8bbbc633bef9feb2",
+  "sourceByteRange": [
+    236390233,
+    236393281
+  ],
+  "shape": "Shipped CLI pixel mascot, source tokens clawd_body/clawd_background; not a separate registered-logo claim",
+  "shapeFile": "assets/clawd.svg",
+  "shapeSHA256": "a310506d09d8ecce838a24fa893efb701de85311eba90873cf3ea88d4d81f703",
+  "renderMaskFile": "assets/clawd-mask.svg",
+  "renderMaskSHA256": "c26b931f2f6f382cdc6786f53d972220eeed87752035264c6e641b16ad6f1588",
+  "poseMasks": [
+    {
+      "name": "default",
+      "file": "assets/clawd-mask.svg",
+      "sha256": "c26b931f2f6f382cdc6786f53d972220eeed87752035264c6e641b16ad6f1588"
+    },
+    {
+      "name": "lookRight",
+      "file": "assets/clawd-look-right-mask.svg",
+      "sha256": "947deb73e686a38bb2595bcc14cc3b5e2464244832e1b3a853bb68838c88f58d"
+    },
+    {
+      "name": "armsUp",
+      "file": "assets/clawd-arms-up-mask.svg",
+      "sha256": "e41c386e6e0101a3e37c1d33c1c88aab2a0df276186c4613f373f77b402c391b"
+    }
+  ],
+  "maskDifference": "Same shipped pixel geometry and native poses with transparent eye holes for recoloring; preserve each pose viewBox aspect and sharp edges",
+  "observedCLIColors": {
+    "body": "#D77757",
+    "eyeBackground": "#000000",
+    "limits": "Observed default true-color CLI; ANSI themes may map differently"
+  },
+  "officialProductPage": "https://claude.com/product/claude-code",
+  "officialRepository": "https://github.com/anthropics/claude-code",
+  "officialLegalPage": "https://code.claude.com/docs/en/legal-and-compliance",
+  "asteriskDistinction": "General Claude asterisk also appears in official Claude Code terminal imagery; this theme uses the shipped CLI mascot with the exact product name.",
+  "creativePalette": {
+    "background": "#0c0806",
+    "platinum": "#f3eadb",
+    "accent": "#d97757",
+    "secondary": "#d6ad72",
+    "quiet": "#887567"
+  },
+  "affiliation": "Independent fan-made DSH startup theme; no Anthropic endorsement claim",
+  "licenseNote": "Anthropic names, trademark and brand/mascot artwork are not relicensed under the project code MIT license. The official CLI license reserves Anthropic rights and refers to its legal agreements; no MIT brand grant claimed."
+}

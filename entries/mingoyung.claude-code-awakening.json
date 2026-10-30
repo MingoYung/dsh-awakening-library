@@ -1,0 +1,18 @@
+{
+  "id": "mingoyung.claude-code-awakening",
+  "title": "Claude Code · 光标唤醒",
+  "author": "MingoYung",
+  "license": "CC-BY-4.0",
+  "kind": "video",
+  "description": "光标唤醒Clawd，整组衬线字标化为柔性光丝，再接铜棕发编程学者。22秒有声，暖铜色原创同人角色，非Anthropic官方形象。",
+  "sourceUrl": "https://github.com/MingoYung/dsh-awakening-library/tree/starter-v1.0.0/works/claude-code-awakening",
+  "licenseUrl": "https://github.com/MingoYung/dsh-awakening-library/blob/starter-v1.0.0/works/claude-code-awakening/LICENSE.md",
+  "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening-library/starter-v1.0.0/works/claude-code-awakening/preview.jpg",
+  "durationSeconds": 22,
+  "asset": {
+    "url": "https://github.com/MingoYung/dsh-awakening-library/releases/download/starter-v1.0.0/claude-code-awakening-1.0.0.mp4",
+    "format": "mp4",
+    "bytes": 4207749,
+    "sha256": "24968a5910759fa1824efbeb6db662c97d5d22754ad4898259f2ca7ddb5787ea"
+  }
+}

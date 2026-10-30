@@ -1,0 +1,29 @@
+{
+  "release": "1.0.0",
+  "completeMovieSha256": "7cd3f3bb33afa18ee2591e10e0d52c6838bd7aa09518780c90628fac3e752849",
+  "scope": "Programmatic prelude code snapshot, official DeepSeek Harness mark geometry, and exact selected tail generation prompt; not a complete deterministic reconstruction kit.",
+  "publicSnapshotChange": "Reverse only the right stream drawing order to match the accepted upper-right-downward correction; clarify an obsolete source comment.",
+  "files": [
+    {
+      "file": "animation.js",
+      "sha256": "b180ee07fcaff023a8bf289e001ff57ba305e13508ea2fcbd7d246681a4bc075",
+      "sourceSha256BeforePublicSnapshotAdjustments": "1b1339a5a0fa78fa8b53c915df6c3f45efce66fba5eee86906760cd56072e8ed"
+    },
+    {
+      "file": "morph.js",
+      "sha256": "923240333c95301d9a6f90bd72e8aca28d87b944c3f63f91138825c9b8971434",
+      "sourceSha256BeforePublicSnapshotAdjustments": "923240333c95301d9a6f90bd72e8aca28d87b944c3f63f91138825c9b8971434"
+    },
+    {
+      "file": "assets/brand.js",
+      "sha256": "9133132dba57f3eed887768752e41015b4286293f6f8b794cb1d49ce25a39475",
+      "sourceSha256BeforePublicSnapshotAdjustments": "9133132dba57f3eed887768752e41015b4286293f6f8b794cb1d49ce25a39475"
+    },
+    {
+      "file": "assets/fish-logo-official.svg",
+      "sha256": "c3a693164d23d7d3b2e0bb14b611e17c011b32bdcc2055f8565adfa9375e000f",
+      "sourceSha256BeforePublicSnapshotAdjustments": "c3a693164d23d7d3b2e0bb14b611e17c011b32bdcc2055f8565adfa9375e000f"
+    }
+  ],
+  "generatedTail": "Original project Seedance 2.0 Fast trial005; no borrowed welcome video in the released movie."
+}

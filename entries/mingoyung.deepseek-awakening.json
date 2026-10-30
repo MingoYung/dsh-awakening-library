@@ -1,0 +1,18 @@
+{
+  "id": "mingoyung.deepseek-awakening",
+  "title": "DeepSeek · 鲸启",
+  "author": "MingoYung",
+  "license": "CC-BY-4.0",
+  "kind": "video",
+  "description": "蓝色鲸鱼标志、文字聚合与柔和光流汇成原创同人角色，含音效和欢迎语。22秒；普通视频按播放器策略取景，品牌权利单独保留。",
+  "sourceUrl": "https://github.com/MingoYung/dsh-awakening-library/tree/starter-v1.0.0/works/deepseek-awakening",
+  "licenseUrl": "https://github.com/MingoYung/dsh-awakening-library/blob/starter-v1.0.0/works/deepseek-awakening/LICENSE.md",
+  "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening-library/starter-v1.0.0/works/deepseek-awakening/preview.jpg",
+  "durationSeconds": 22,
+  "asset": {
+    "url": "https://github.com/MingoYung/dsh-awakening-library/releases/download/starter-v1.0.0/deepseek-awakening-1.0.0.mp4",
+    "format": "mp4",
+    "bytes": 8170415,
+    "sha256": "7cd3f3bb33afa18ee2591e10e0d52c6838bd7aa09518780c90628fac3e752849"
+  }
+}

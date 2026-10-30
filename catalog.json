@@ -3,15 +3,69 @@
   "entries": [
     {
       "id": "mingoyung.awakening",
-      "title": "鲸启",
+      "title": "鲸启（历史内置兼容）",
       "author": "MingoYung",
       "license": "MIT",
       "kind": "builtin",
-      "description": "鲸启插件内置的22秒鲸鱼主题动画，包含文字组装、粒子归流与带原声的欢迎片段。第三方素材署名见来源页；这是社区作品，不代表DSH官方发布。",
+      "description": "旧版鲸启随包22秒动画的兼容条目，包含已署名第三方角色片段与原声。保留旧版来源和MIT通知；0.7.0新增原创主题另列，不把旧片段声明为新作。",
       "sourceUrl": "https://github.com/MingoYung/dsh-awakening/tree/v0.5.0",
       "licenseUrl": "https://github.com/MingoYung/dsh-awakening/blob/v0.5.0/CREDITS.md",
       "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening/v0.5.0/screenshots/preview-whale-desktop.png",
       "durationSeconds": 22
+    },
+    {
+      "id": "mingoyung.claude-code-awakening",
+      "title": "Claude Code · 光标唤醒",
+      "author": "MingoYung",
+      "license": "CC-BY-4.0",
+      "kind": "video",
+      "description": "光标唤醒Clawd，整组衬线字标化为柔性光丝，再接铜棕发编程学者。22秒有声，暖铜色原创同人角色，非Anthropic官方形象。",
+      "sourceUrl": "https://github.com/MingoYung/dsh-awakening-library/tree/starter-v1.0.0/works/claude-code-awakening",
+      "licenseUrl": "https://github.com/MingoYung/dsh-awakening-library/blob/starter-v1.0.0/works/claude-code-awakening/LICENSE.md",
+      "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening-library/starter-v1.0.0/works/claude-code-awakening/preview.jpg",
+      "durationSeconds": 22,
+      "asset": {
+        "url": "https://github.com/MingoYung/dsh-awakening-library/releases/download/starter-v1.0.0/claude-code-awakening-1.0.0.mp4",
+        "format": "mp4",
+        "bytes": 4207749,
+        "sha256": "24968a5910759fa1824efbeb6db662c97d5d22754ad4898259f2ca7ddb5787ea"
+      }
+    },
+    {
+      "id": "mingoyung.codex-awakening",
+      "title": "Codex · 构想成形",
+      "author": "MingoYung",
+      "license": "CC-BY-4.0",
+      "kind": "video",
+      "description": "铂白与薄荷色的Codex主题，柔和光流化为银发编程伙伴，含音效和欢迎语。22秒；原创同人角色，非OpenAI官方形象。",
+      "sourceUrl": "https://github.com/MingoYung/dsh-awakening-library/tree/starter-v1.0.0/works/codex-awakening",
+      "licenseUrl": "https://github.com/MingoYung/dsh-awakening-library/blob/starter-v1.0.0/works/codex-awakening/LICENSE.md",
+      "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening-library/starter-v1.0.0/works/codex-awakening/preview.jpg",
+      "durationSeconds": 22,
+      "asset": {
+        "url": "https://github.com/MingoYung/dsh-awakening-library/releases/download/starter-v1.0.0/codex-awakening-1.0.0.mp4",
+        "format": "mp4",
+        "bytes": 5920928,
+        "sha256": "9a3a11a7edd9ff1c2185e293f69aed75495f935c665ecb09b3df751900b306a5"
+      }
+    },
+    {
+      "id": "mingoyung.deepseek-awakening",
+      "title": "DeepSeek · 鲸启",
+      "author": "MingoYung",
+      "license": "CC-BY-4.0",
+      "kind": "video",
+      "description": "蓝色鲸鱼标志、文字聚合与柔和光流汇成原创同人角色，含音效和欢迎语。22秒；普通视频按播放器策略取景，品牌权利单独保留。",
+      "sourceUrl": "https://github.com/MingoYung/dsh-awakening-library/tree/starter-v1.0.0/works/deepseek-awakening",
+      "licenseUrl": "https://github.com/MingoYung/dsh-awakening-library/blob/starter-v1.0.0/works/deepseek-awakening/LICENSE.md",
+      "previewUrl": "https://raw.githubusercontent.com/MingoYung/dsh-awakening-library/starter-v1.0.0/works/deepseek-awakening/preview.jpg",
+      "durationSeconds": 22,
+      "asset": {
+        "url": "https://github.com/MingoYung/dsh-awakening-library/releases/download/starter-v1.0.0/deepseek-awakening-1.0.0.mp4",
+        "format": "mp4",
+        "bytes": 8170415,
+        "sha256": "7cd3f3bb33afa18ee2591e10e0d52c6838bd7aa09518780c90628fac3e752849"
+      }
     }
   ]
 }
